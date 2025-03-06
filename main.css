@@ -24,19 +24,19 @@ grid-gap: 25px;
 grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
-    "h v"
+    "v h"
     "a a";
 }
 
-.history {
+#history {
 grid-area: h;
 }
 
-.variations{
+#variations{
 grid-area: v;
 }
 
-.alphabet {
+#alphabet {
 grid-area: a;
 }
 }
@@ -46,9 +46,14 @@ footer{
 }
 
 /* variable font animation */
+
+h2{
+    color: seashell;
+    font-variation-settings: "wght" 50, "srff" 80;
+}
 h3{
-    color: white;
-    font-family: 'Angst';
+    color: rgb(205, 204, 198);
+    font-family: 'Angst'; 
     text-align: center;
     font-size: 5em;
     animation: weightChange 7s infinite;

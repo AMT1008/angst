@@ -89,7 +89,7 @@ h3{
     0%, 100%{
         font-variation-settings: "wght" 0, "srff" 0;
     }
-    50%{font-variation-settings:  "wght" 0, "srff" 100;
+    50%{font-variation-settings: "wght" 0, "srff" 100;
     }
 }
 h4{ 
@@ -143,6 +143,37 @@ h4{
     font-family: "DM Serif Display", serif;
     font-weight: 400;
     font-style: italic;
+  }
+
+img[src="images/cropface.png"] {
+    width: 800px;
+
+}
+
+ /* Hover effect with animation */
+ .hover-effect {
+    position: relative;
+    color: #1900ff;
+    transition: color 0.3s;
+    text-align: center; /* Center the hover effect text */
+  }
+
+  .hover-effect::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #007bff;
+    visibility: hidden;
+    transform: scaleX(0);
+    transition: all 0.3s ease-in-out 0s;
+  }
+
+  .hover-effect:hover::before {
+    visibility: visible;
+    transform: scaleX(1);
   }
 
 

@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
     <link rel="stylesheet" href="navigation.css">
+    <link rel="icon" href="images/flavicon.png">
     <title>Variable Type Specimen</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,6 +23,21 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+      }
+      .hero h3 {
+        position: relative;
+        z-index: 1;
+      }
+      .hero img.sword {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 0;
+      }
+      .hero img.cropface {
+        margin-top: 10px; /* Adjust the margin as needed */
       }
     </style>
 </head>
@@ -46,7 +62,8 @@
     <section class="hero">
         <h3>Angst</h3>
         <h3>V@riable Font</h3>
-        <img src="sword.png" alt="Sword Image" style="width: 100px; height: auto;">
+        <img src="images/sword.png" alt="Sword Image" class="sword" style="width: 300px; height: auto;">
+        <img src="images/cropface.png" alt="Face Image" class="cropface" style="width: 300px; height: auto;">
     </section>
     <!-- Type history -->
     <section class="page-wrapper">
@@ -68,6 +85,10 @@
             <p style="color: white; text-align: center;font-size: 25px;">1234567890</p>
             <p style="color: white; text-align: center;font-size: 25px;">!@#$%^&*()</p>
         </section>
+        <section id="download">
+            <h5>Download</h5>
+            <p>Download the font here</p>
+            <a href="https://fontesk.com/angst-typeface/" class="hover-effect">Hover Effect</a>
     </section>
     <!-- Start of the footer -->
     <footer>

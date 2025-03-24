@@ -25,7 +25,8 @@ grid-template-columns: 1fr 1fr;
 grid-template-rows: auto;
 grid-template-areas: 
     "a a"
-    "v h";
+    "v h"
+    "b b ";
 }
 
 #history {
@@ -39,10 +40,30 @@ grid-area: v;
 #alphabet {
 grid-area: h;
 }
+
+.hover-effect {
+    grid-area: b; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center; 
+}
 }
 /* CSS for the footer */
 footer{
-    background-color: rgb(0, 0, 0);
+    background-color: transparent; 
+    display: flex;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align:center;
+    padding: 10px;
+    transition: opacity 0.3s; /* Add transition for smooth opacity change */
+}
+
+body:hover footer {
+    opacity: 0; 
 }
 
 /* variable font animation */
@@ -89,7 +110,7 @@ h3{
     0%, 100%{
         font-variation-settings: "wght" 0, "srff" 0;
     }
-    50%{font-variation-settings: "wght" 0, "srff" 100;
+    50%{font-variation-settings:  "wght" 0, "srff" 100;
     }
 }
 h4{ 
@@ -117,10 +138,7 @@ h4{
     height:100vh;
     font-size: 7em;
     display:grid;
-    place-content: center;
-    margin: 0;
-    text-align: center;
-    font-variation-settings: "wght" 120, "wdth" 0, "XXXX" 100;
+    
 }
 
 #variations p {
@@ -155,7 +173,6 @@ img[src="images/cropface.png"] {
     position: relative;
     color: #1900ff;
     transition: color 0.3s;
-    text-align: center; /* Center the hover effect text */
   }
 
   .hover-effect::before {
@@ -165,7 +182,7 @@ img[src="images/cropface.png"] {
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #007bff;
+    background-color: #ff0000;
     visibility: hidden;
     transform: scaleX(0);
     transition: all 0.3s ease-in-out 0s;
@@ -176,4 +193,30 @@ img[src="images/cropface.png"] {
     transform: scaleX(1);
   }
 
-
+  .drop-cap::first-letter {
+    float: left;
+    font-size: 3em;
+    line-height: -1;
+    padding-right: 0.1em;
+    color: red;
+  }
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+  }
+  .hero h3 {
+    position: relative;
+    z-index: 1;
+  }
+  .hero img.sword {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+  }
+  .hero img.cropface {
+    margin-top: 10px; /* Adjust the margin as needed */
+  }

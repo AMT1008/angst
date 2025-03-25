@@ -160,5 +160,13 @@
       transform: scale(1,1);
     }
   }
-  
-  
+
+  footer {
+    opacity: 0;
+    transition: opacity 400ms ease-in-out;
+  }
+
+  body.at-bottom footer {
+    opacity: 1;
+  }
+

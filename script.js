@@ -1,8 +1,7 @@
 document.addEventListener('scroll', function() {
-    const footer = document.querySelector('footer');
     if ((window.innerHeight + window.scrollY) >= document.body.offsetHeight) {
-        footer.classList.add('visible');
+        document.body.classList.add('at-bottom');
     } else {
-        footer.classList.remove('visible');
+        document.body.classList.remove('at-bottom');
     }
 });

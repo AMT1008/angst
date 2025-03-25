@@ -40,6 +40,10 @@ grid-area: v;
 #alphabet {
 grid-area: h;
 }
+#download{
+grid-area: b;
+padding:100px;
+}
 
 
 }
@@ -54,13 +58,10 @@ footer{
     width: 100%;
     text-align:center;
     padding: 10px;
-    transition: opacity 0.3s; /* Add transition for smooth opacity change */
-    opacity: 0; /* Initially hide the footer */
+   
 }
 
-footer.visible {
-    opacity: 1; /* Show the footer when the user is at the bottom */
-}
+
 
 
 
@@ -215,6 +216,6 @@ img[src="images/cropface.png"] {
     transform: translateX(-50%);
     z-index: 0;
   }
-  .hero img.cropface {
-    margin-top: 10px; /* Adjust the margin as needed */
-  }
+.download {
+    color: #1900ff;
+}

@@ -41,18 +41,13 @@ grid-area: v;
 grid-area: h;
 }
 
-.hover-effect {
-    grid-area: b; 
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center; 
-}
+
 }
 /* CSS for the footer */
 footer{
     background-color: transparent; 
     display: flex;
+    justify-content: center;
     align-items: center;
     position: fixed;
     bottom: 0;
@@ -60,11 +55,14 @@ footer{
     text-align:center;
     padding: 10px;
     transition: opacity 0.3s; /* Add transition for smooth opacity change */
+    opacity: 0; /* Initially hide the footer */
 }
 
-body:hover footer {
-    opacity: 0; 
+footer.visible {
+    opacity: 1; /* Show the footer when the user is at the bottom */
 }
+
+
 
 /* variable font animation */
 
